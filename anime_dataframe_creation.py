@@ -1,7 +1,4 @@
-from lxml import html
-import requests
 import mal_scraper
-import numpy as np
 import pandas as pd
 import time
 from webscrap import get_data
