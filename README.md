@@ -53,11 +53,21 @@ Please fill all parameters before clicking "Start Prediction".
 ### Recommended Values for Parameters
 * Username: please don't type more than one. Stored data must be erased if different username is typed.
 * Consumption status check list: unless you have strong preferences, "All" is recommended.
-* Minimum No.- Genre: 5~15 is recommended range. small value suits smaller list size (~200), and large value suits larger list size (700~)
-* Minimum No.- Studio: 10~20 is recommended range. small value suits smaller list size (~200), and large value suits larger list size (700~)
+* Minimum No.- Genre: 5~15 is recommended range. small value suits smaller list size (<200), and large value suits larger list size (>700)
+* Minimum No.- Studio: 10~20 is recommended range. small value suits smaller list size (<200), and large value suits larger list size (>700)
 * Rounds: 3 is recommended. larger is better, but run time can be concerning.
 * Label Result: "Yes" is recommended unless only one of consumption status is selected.
 
 ## Manual Customization and Optimization
+To optimize parameters, please check the individual "result.csv". If you found one that suits your expectations, then find the corresponding "params.csv" file. Then move "params.csv" to the "params" folder.
+
+Corresponding files have same number. Ex: "result3.csv", "params3.csv"
+
+For genre and studio customization, please edit "anime_train_test_creation.py" manually. You can specify which studio should be kept even if the entry numbers are lower than minimum no. that you set.
 
 ## Cautions
+Please don't run the program for more than 1 username. It can corrupt all the data.
+
+You can run the program for different username if you create empty "data" and "data/params" folders. Though it's not recommended if you do not understand the process of the program well.
+
+Also, if Terminal output "TypeError", just click "Start Prediction" again. This is one issue that I haven't solved yet.
