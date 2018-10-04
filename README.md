@@ -73,3 +73,5 @@ Please don't run the program for more than 1 username. It can corrupt all the da
 You can run the program for different username if you create empty "data" and "data/params" folders. Though it's not recommended if you do not understand the process of the program well.
 
 Also, if Terminal output "TypeError", just click "Start Prediction" again. This is one issue that I haven't solved yet.
+
+If you think the program is not running well type `ctrl+c` or `cmd+c` to stop the program. The program saves important information in the middle of process, so don't worry about quitting program can affect the result.
