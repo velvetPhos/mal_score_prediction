@@ -39,7 +39,9 @@ To launch app, please set the "mal_score_prediction" folder as working directory
 Then type `python main.py` to launch app.
 
 This is the application window.
+
 ![alt text](https://i.imgur.com/qVEKsYc.jpg)
+
 Please fill all parameters before clicking "Start Prediction".
 
 ### Parameters
