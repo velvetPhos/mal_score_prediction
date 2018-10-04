@@ -1,8 +1,4 @@
-import numpy as np
 import pandas as pd
-import xgboost as xgb
-import time
-
 
 def create_train_test(genre_lim, studio_lim):
     df = pd.read_csv('data/data.csv')
