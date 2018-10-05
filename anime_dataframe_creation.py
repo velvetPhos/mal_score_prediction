@@ -51,6 +51,7 @@ def create_df(username):
     # checks if there's usable old data
     try:
         old_df = pd.read_csv('data/data.csv')
+        old_df = old_df.drop('consumption_status', axis=1)
         noOldFile = False
     except:
         pass
