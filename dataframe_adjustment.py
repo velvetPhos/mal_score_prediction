@@ -14,6 +14,6 @@ def adjust_df(ignore_consumption):
 
     df = pd.concat([train, test])
 
-    df = df.drop('consumption_status', axis=1)
+    df = df.drop('consumption_status', axis=1).drop('Unnamed: 0', axis=1).drop('index', axis=1)
 
     df.to_csv('data/working_data.csv')
