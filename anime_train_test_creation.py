@@ -1,7 +1,8 @@
 import pandas as pd
 
+
 def create_train_test(genre_lim, studio_lim):
-    df = pd.read_csv('data/data.csv')
+    df = pd.read_csv('data/working_data.csv')
 
     genres = ['Historical',
                 'Drama',

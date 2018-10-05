@@ -46,7 +46,7 @@ genres = ['Historical',
 
 noOldFile = True
 
-def create_df(username, ignore_consumption):
+def create_df(username):
 
     # checks if there's usable old data
     try:
@@ -93,19 +93,12 @@ def create_df(username, ignore_consumption):
 
     test = test[test['consumption_status'] != 'completed']
 
-    # removes unneeded consumption status
-    if len(ignore_consumption) > 0:
-        for c in ignore_consumption:
-            test = test[test['consumption_status'] != c]
-
     train = train.reset_index()
     test = test.reset_index()
 
     df = pd.concat([train, test])
 
     df = df.drop('index', axis=1)
-
-    df = df.drop('consumption_status', axis=1)
 
     data_cols = ['mean', 'rank', 'popularity', 'members', 'studio', 'type', 'year', 'source', 'genres', 'fav', 'ep']
 

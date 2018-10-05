@@ -6,6 +6,7 @@ from anime_score_prediction import predict_score
 from result_combining import combine_results
 from result_labeling import lable_result
 from fscores_combining import combine_fscores
+from dataframe_adjustment import adjust_df
 
 class mainApp:
     def __init__(self, app):
@@ -106,7 +107,8 @@ class mainApp:
                 if not hold_var.get():
                     ignore_consumption.append('on_hold')
 
-            create_df(username.get(), ignore_consumption)
+            create_df(username.get())
+            adjust_df(ignore_consumption)
             create_train_test(int(genre_lim.get()), int(studio_lim.get()))
             predict_score(int(rounds.get()))
             combine_results(int(rounds.get()))
