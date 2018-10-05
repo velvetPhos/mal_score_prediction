@@ -3,7 +3,9 @@ import pandas as pd
 import time
 from webscrap import get_data
 
-genres = ['Historical',
+def create_df(username):
+
+    genres = ['Historical',
             'Drama',
             'Shoujo',
             'Adventure',
@@ -44,9 +46,7 @@ genres = ['Historical',
             'School']
 
 
-noOldFile = True
-
-def create_df(username):
+    noOldFile = True
 
     # checks if there's usable old data
     try:
