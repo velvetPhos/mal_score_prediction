@@ -44,6 +44,8 @@ This is the application window.
 
 Please fill all parameters before clicking "Start Prediction".
 
+Result will be in "data" folder, and name would be "final_data.csv" or "final_data_labeled.csv".
+
 ### Parameters
 * Username: please type username here
 * Consumption status check list: check whichever you want to include in prediction. Default is "All".
