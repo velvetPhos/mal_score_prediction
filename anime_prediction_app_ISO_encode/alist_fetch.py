@@ -46,6 +46,6 @@ def get_alist(username):
 
     df = pd.DataFrame(data=data)
 
-    df.to_csv('data/alist.csv', encoding="ISO-8859-1")
+    df.to_csv('data/alist.csv')
 
     print('Finished alist fetching')

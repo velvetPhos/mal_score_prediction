@@ -29,6 +29,6 @@ def combine_fscores(rounds):
 
     final = combined[['X', 'mean']].rename({'X': 'features','mean': 'feature importance'}, axis=1).sort_values('feature importance', ascending=False)
 
-    final.to_csv('data/final_fscores.csv', encoding="ISO-8859-1")
+    final.to_csv('data/final_fscores.csv')
 
     print('Finished fscores combining')

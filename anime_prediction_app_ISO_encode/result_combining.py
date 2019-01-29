@@ -29,6 +29,6 @@ def combine_results(rounds):
 
     final = final.merge(alist, on='id_ref')
 
-    final.to_csv('data/final_data.csv', encoding="ISO-8859-1")
+    final.to_csv('data/final_data.csv')
 
     print('Finished result combining')

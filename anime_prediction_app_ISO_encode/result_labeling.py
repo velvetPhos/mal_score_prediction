@@ -16,6 +16,6 @@ def lable_result():
 
     final_data = final_data[['id_ref', 'name', 'prediction', 'consumption_status']]
 
-    final_data.to_csv('data/final_data_labled.csv', encoding="ISO-8859-1")
+    final_data.to_csv('data/final_data_labled.csv')
 
     print('Finished labeling')

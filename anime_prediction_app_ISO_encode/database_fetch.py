@@ -150,11 +150,11 @@ def update_data():
         else:
             df = df[df['id_ref'] != mal_id]
         print(len(list(df[df['notDone'] == True]['id_ref'].values)))
-        df.to_csv('data/data.csv', encoding="ISO-8859-1")
+        df.to_csv('data/data.csv')
         while(time.time() <= timeout):
             pass
 
 
-    df.to_csv('data/data.csv', encoding="ISO-8859-1")
+    df.to_csv('data/data.csv')
 
     print('Finished updating data')

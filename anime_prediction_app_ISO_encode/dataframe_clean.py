@@ -12,4 +12,4 @@ for c in list(filter(lambda x: re.search('Unnamed:',x), df.columns)):
 
 df = df.reset_index().drop('index', axis=1)
 
-df.to_csv('data/data.csv', encoding="ISO-8859-1")
+df.to_csv('data/data.csv')

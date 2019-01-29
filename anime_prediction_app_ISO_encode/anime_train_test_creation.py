@@ -9,8 +9,8 @@ def create_train_test():
 
 
 
-    df[df['score'] >0].to_csv('data/train.csv', encoding="ISO-8859-1")
+    df[df['score'] >0].to_csv('data/train.csv')
 
-    df[df['score'] == 0].to_csv('data/test.csv', encoding="ISO-8859-1")
+    df[df['score'] == 0].to_csv('data/test.csv')
 
     print('Finished train and test creation')

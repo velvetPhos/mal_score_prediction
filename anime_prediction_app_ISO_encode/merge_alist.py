@@ -25,6 +25,6 @@ def merge_alist():
     for mal_id in set(df['id_ref'].values):
         df.loc[df['id_ref'] == mal_id, 'score'] = alist.loc[alist['id_ref'] == mal_id, 'score'].values[0]
 
-    df.to_csv('data/data.csv', encoding="ISO-8859-1")
+    df.to_csv('data/data.csv')
 
     print('Finished merging alist')

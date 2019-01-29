@@ -65,7 +65,7 @@ def predict_score(rounds):
 
             df = pd.DataFrame(data={'keys':list(params.keys()), 'values':list(params.values())})
 
-            df.to_csv('data/params{}.csv'.format(n), encoding="ISO-8859-1")
+            df.to_csv('data/params{}.csv'.format(n))
 
         feature_columns = train_X.columns.values
 
@@ -86,11 +86,11 @@ def predict_score(rounds):
 
         final_res = final_res.sort_values(by=['prediction'], ascending=False)
 
-        final_res.to_csv('data/result{}.csv'.format(n), encoding="ISO-8859-1")
+        final_res.to_csv('data/result{}.csv'.format(n))
 
 
         fscores = pd.DataFrame({'X': list(clf.get_fscore().keys()), 'Y': list(clf.get_fscore().values())})
         fscores = fscores.sort_values(by=['Y'], ascending=False)
-        fscores.to_csv('data/fscores{}.csv'.format(n), encoding="ISO-8859-1")
+        fscores.to_csv('data/fscores{}.csv'.format(n))
 
     print('Finished score prediction')
