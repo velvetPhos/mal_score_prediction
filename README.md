@@ -1,6 +1,7 @@
 # mal_score_prediction
 
 mal_score_prediction is a python app that predicts scores of your PTW, dropped, on-hold, and watching in your mal list.
+
 This program uses the data fetched from Jikan API, and it is the vital part of the program.
 
 ## Installation
