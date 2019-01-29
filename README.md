@@ -28,7 +28,7 @@ install anaconda python (https://docs.continuum.io/anaconda/install/)
 `pip install bayesian-optimization`
 
 ## Usage
-To launch app, please set the "mal_score_prediction/anime_prediction_app" folder as working directory using Terminal or cmd.
+To launch app, please set the "anime_prediction_app" folder as working directory using Terminal or cmd.
 
 Then type `python main.py` to launch app.
 
