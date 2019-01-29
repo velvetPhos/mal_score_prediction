@@ -10,6 +10,10 @@ from result_combining import combine_results
 from fscores_combining import combine_fscores
 from result_labeling import lable_result
 
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 class mainApp:
     def __init__(self, app):
         self.app = app
