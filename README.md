@@ -23,7 +23,7 @@ To install those follow this:
 
 install anaconda python (https://docs.continuum.io/anaconda/install/)
 
-`pip install xgboost`
+`pip install xgboost` or `conda install -c conda-forge xgboost`
 
 `pip install bayesian-optimization`
 
