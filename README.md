@@ -21,19 +21,11 @@ To install those follow this:
 
 `xcode-select --install` (only for mac users)
 
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+install anaconda python (https://docs.continuum.io/anaconda/install/)
 
-`brew install python3`
-
-`pip install pandas`
-
-`pip3 install xgboost`
+`pip install xgboost`
 
 `pip install bayesian-optimization`
-
-`pip install -U scikit-learn`
-
-`pip install lxml`
 
 ## Usage
 To launch app, please set the "mal_score_prediction" folder as working directory using Terminal or cmd.
