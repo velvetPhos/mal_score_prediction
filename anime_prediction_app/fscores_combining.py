@@ -4,7 +4,7 @@ def combine_fscores(rounds):
     fscores = {}
 
     for n in range(rounds):
-        temp = pd.read_csv('data/fscores{}.csv'.format(n))
+        temp = pd.read_csv('data/fscores{}.csv'.format(n), encoding = "ISO-8859-1")
         name = 'Y{}'.format(n)
         temp = temp.drop('Unnamed: 0', axis=1).rename({'Y': name}, axis=1)
 

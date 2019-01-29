@@ -4,7 +4,7 @@ def combine_results(rounds):
     res = {}
 
     for n in range(rounds):
-        temp = pd.read_csv('data/result{}.csv'.format(n))
+        temp = pd.read_csv('data/result{}.csv'.format(n), encoding = "ISO-8859-1")
         name = 'prediction{}'.format(n)
         temp = temp.drop('Unnamed: 0', axis=1).rename({'prediction': name}, axis=1)
 

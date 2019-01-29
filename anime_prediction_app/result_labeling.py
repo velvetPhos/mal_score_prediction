@@ -4,7 +4,7 @@ import pandas as pd
 # no room for custumization
 
 def lable_result():
-    final_data = pd.read_csv('data/final_data.csv')
+    final_data = pd.read_csv('data/final_data.csv', encoding = "ISO-8859-1")
 
 
     list_data = pd.read_csv('data/alist.csv')

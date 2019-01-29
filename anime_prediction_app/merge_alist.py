@@ -2,9 +2,9 @@ import pandas as pd
 
 
 def merge_alist():
-    alist = pd.read_csv('data/alist.csv').drop('Unnamed: 0', axis=1)
+    alist = pd.read_csv('data/alist.csv', encoding = "ISO-8859-1").drop('Unnamed: 0', axis=1)
 
-    df = pd.read_csv('data/data.csv').drop('Unnamed: 0', axis=1)
+    df = pd.read_csv('data/data.csv', encoding = "ISO-8859-1").drop('Unnamed: 0', axis=1)
 
     columns = df.columns
 

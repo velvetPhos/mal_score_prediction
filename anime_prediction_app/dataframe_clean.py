@@ -3,7 +3,7 @@ import numpy as np
 import re
 
 
-df = pd.read_csv('data/data.csv')
+df = pd.read_csv('data/data.csv', encoding = "ISO-8859-1")
 
 
 

@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def create_train_test():
-    df = pd.read_csv('data/data.csv')
+    df = pd.read_csv('data/data.csv', encoding = "ISO-8859-1")
 
 
     df = df.drop('Unnamed: 0', axis=1).drop('id_ref', axis=1)

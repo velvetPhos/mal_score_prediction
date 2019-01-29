@@ -81,7 +81,7 @@ studio = ['8bit',
 
 
 def update_data():
-    df = pd.read_csv('data/data.csv').drop('Unnamed: 0', axis=1)
+    df = pd.read_csv('data/data.csv', encoding = "ISO-8859-1").drop('Unnamed: 0', axis=1)
 
     for mal_id in list(df[df['notDone'] == True]['id_ref'].values):
         timeout = time.time() + 2
@@ -96,8 +96,11 @@ def update_data():
             df.loc[df['id_ref'] == mal_id, 'members'] = temp['members']
             df.loc[df['id_ref'] == mal_id, 'fav'] = temp['favorites']
             df.loc[df['id_ref'] == mal_id, 'ep'] = temp['episodes']
-            df.loc[df['id_ref'] == mal_id, 'year'] = temp['aired']['from'][:4]
 
+            try:
+                df.loc[df['id_ref'] == mal_id, 'year'] = temp['aired']['from'][:4]
+            except:
+                df.loc[df['id_ref'] == mal_id, 'year'] = 0
 
             if temp['source'] == 'Manga' or temp['source'] == 'Webmanga' or temp['source'] == '4-komamanga':
                 df.loc[df['id_ref'] == mal_id, 'Manga'] = 1

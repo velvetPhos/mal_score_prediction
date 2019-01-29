@@ -4,8 +4,8 @@ from bayes_opt import BayesianOptimization
 from sklearn.model_selection import train_test_split
 
 def predict_score(rounds):
-    train_df = pd.read_csv('data/train.csv')
-    test_df = pd.read_csv('data/test.csv')
+    train_df = pd.read_csv('data/train.csv', encoding = "ISO-8859-1")
+    test_df = pd.read_csv('data/test.csv', encoding = "ISO-8859-1")
 
     train_X = train_df.drop('Unnamed: 0', axis=1).drop('name', axis=1).drop('score', axis=1)
     train_Y = train_df['score']
