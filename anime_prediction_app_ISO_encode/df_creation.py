@@ -140,7 +140,7 @@ def create_df():
     for c in genres:
         df[c] = 0
 
-    df.to_csv('data/data.csv')
+    df.to_csv('data/data.csv', encoding = "ISO-8859-1")
 
 
 create_df()

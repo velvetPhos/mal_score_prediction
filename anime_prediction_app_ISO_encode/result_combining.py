@@ -4,7 +4,7 @@ def combine_results(rounds):
     res = {}
 
     for n in range(rounds):
-        temp = pd.read_csv('data/result{}.csv'.format(n))
+        temp = pd.read_csv('data/result{}.csv'.format(n), encoding = "ISO-8859-1")
         name = 'prediction{}'.format(n)
         temp = temp.drop('Unnamed: 0', axis=1).rename({'prediction': name}, axis=1)
 
@@ -25,10 +25,10 @@ def combine_results(rounds):
 
     final = combined[['id_ref', 'mean']].rename({'mean': 'prediction'}, axis=1).sort_values('prediction', ascending=False)
 
-    alist = pd.read_csv('data/alist.csv')[['name', 'id_ref']]
+    alist = pd.read_csv('data/alist.csv', encoding = "ISO-8859-1")[['name', 'id_ref']]
 
     final = final.merge(alist, on='id_ref')
 
-    final.to_csv('data/final_data.csv')
+    final.to_csv('data/final_data.csv', encoding = "ISO-8859-1")
 
     print('Finished result combining')

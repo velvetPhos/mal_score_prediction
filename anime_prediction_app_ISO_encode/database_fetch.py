@@ -81,7 +81,7 @@ studio = ['8bit',
 
 
 def update_data():
-    df = pd.read_csv('data/data.csv').drop('Unnamed: 0', axis=1)
+    df = pd.read_csv('data/data.csv', encoding = "ISO-8859-1").drop('Unnamed: 0', axis=1)
 
     for mal_id in list(df[df['notDone'] == True]['id_ref'].values):
         timeout = time.time() + 2
@@ -150,11 +150,11 @@ def update_data():
         else:
             df = df[df['id_ref'] != mal_id]
         print(len(list(df[df['notDone'] == True]['id_ref'].values)))
-        df.to_csv('data/data.csv')
+        df.to_csv('data/data.csv', encoding = "ISO-8859-1")
         while(time.time() <= timeout):
             pass
 
 
-    df.to_csv('data/data.csv')
+    df.to_csv('data/data.csv', encoding = "ISO-8859-1")
 
     print('Finished updating data')

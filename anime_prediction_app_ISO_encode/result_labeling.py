@@ -4,16 +4,16 @@ import pandas as pd
 # no room for custumization
 
 def lable_result():
-    final_data = pd.read_csv('data/final_data.csv')
+    final_data = pd.read_csv('data/final_data.csv', encoding = "ISO-8859-1")
 
 
-    list_data = pd.read_csv('data/alist.csv')
+    list_data = pd.read_csv('data/alist.csv', encoding = "ISO-8859-1")
     list_data = list_data[['id_ref', 'consumption_status']]
 
     final_data = final_data.merge(list_data, on='id_ref')
 
     final_data = final_data.drop('Unnamed: 0', axis=1)
 
-    final_data.to_csv('data/final_data_labled.csv')
+    final_data.to_csv('data/final_data_labled.csv', encoding = "ISO-8859-1")
 
     print('Finished labeling')

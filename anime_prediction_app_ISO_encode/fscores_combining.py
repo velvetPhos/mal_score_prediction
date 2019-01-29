@@ -4,7 +4,7 @@ def combine_fscores(rounds):
     fscores = {}
 
     for n in range(rounds):
-        temp = pd.read_csv('data/fscores{}.csv'.format(n))
+        temp = pd.read_csv('data/fscores{}.csv'.format(n), encoding = "ISO-8859-1")
         name = 'Y{}'.format(n)
         temp = temp.drop('Unnamed: 0', axis=1).rename({'Y': name}, axis=1)
 
@@ -29,6 +29,6 @@ def combine_fscores(rounds):
 
     final = combined[['X', 'mean']].rename({'X': 'features','mean': 'feature importance'}, axis=1).sort_values('feature importance', ascending=False)
 
-    final.to_csv('data/final_fscores.csv')
+    final.to_csv('data/final_fscores.csv', encoding = "ISO-8859-1")
 
     print('Finished fscores combining')
