@@ -46,7 +46,7 @@ Result will be in "data" folder, and name would be "final_data.csv" or "final_da
 
 ### Recommended Values for Parameters
 * Username: please don't type more than one. Stored data must be erased if different username is typed.
-* Rounds: 3 is recommended. larger is better, but run time can be concerning.
+* Rounds: Only increase 1 at time since Bayesian Optimazation would output only one unique parameter each run. First run should be 1. Rounds number should always be 1 ~ (no. of stored parameters + 1).
 
 ## Manual Customization and Optimization
 To optimize parameters, please check the individual "result.csv". If you found one that suits your expectations, then find the corresponding "params.csv" file. Then move "params.csv" to the "params" folder.
