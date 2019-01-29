@@ -59,3 +59,5 @@ Please don't run the program for more than 1 username. It can corrupt all the da
 You can run the program for different username if you create empty "data" and "data/params" folders. Though it's not recommended if you do not understand the process of the program well.
 
 If you think the program is not running well type `ctrl+c` to interrupt the program. The program saves important information in the middle of process, so don't worry about quitting program can affect the result.
+
+If the program has encoding issue (windows specific issue), please use the ISO_encode version.
