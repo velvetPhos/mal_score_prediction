@@ -60,7 +60,7 @@ def predict_score(rounds):
             # Optimally needs quite a few more initiation points and number of iterations
             xgb_bo.maximize(init_points=3, n_iter=5, acq='ei')
 
-            params = xgb_bo.res['max']['max_params']
+            params = xgb_bo.res[-1]['params']
             params['max_depth'] = int(params['max_depth'])
 
             df = pd.DataFrame(data={'keys':list(params.keys()), 'values':list(params.values())})
