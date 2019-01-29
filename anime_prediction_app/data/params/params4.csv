@@ -1,0 +1,4 @@
+,keys,values
+0,max_depth,7.0
+1,gamma,0.0
+2,colsample_bytree,0.9
