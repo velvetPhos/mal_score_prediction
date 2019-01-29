@@ -96,7 +96,11 @@ def update_data():
             df.loc[df['id_ref'] == mal_id, 'members'] = temp['members']
             df.loc[df['id_ref'] == mal_id, 'fav'] = temp['favorites']
             df.loc[df['id_ref'] == mal_id, 'ep'] = temp['episodes']
-            df.loc[df['id_ref'] == mal_id, 'year'] = temp['aired']['from'][:4]
+
+            try:
+                df.loc[df['id_ref'] == mal_id, 'year'] = temp['aired']['from'][:4]
+            except:
+                df.loc[df['id_ref'] == mal_id, 'year'] = 0
 
 
             if temp['source'] == 'Manga' or temp['source'] == 'Webmanga' or temp['source'] == '4-komamanga':
