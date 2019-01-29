@@ -18,7 +18,7 @@ Both should work.
 
 To install those follow this:
 
-`xcode-select --install`
+`xcode-select --install` (only for mac users)
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
