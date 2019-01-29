@@ -4,8 +4,8 @@ from bayes_opt import BayesianOptimization
 from sklearn.model_selection import train_test_split
 
 def predict_score(rounds):
-    train_df = pd.read_csv('data/train.csv', encoding = "ISO-8859-1")
-    test_df = pd.read_csv('data/test.csv', encoding = "ISO-8859-1")
+    train_df = pd.read_csv('data/train.csv', encoding="ISO-8859-1")
+    test_df = pd.read_csv('data/test.csv', encoding="ISO-8859-1")
 
     train_X = train_df.drop('Unnamed: 0', axis=1).drop('name', axis=1).drop('score', axis=1).drop('id_ref', axis=1)
     train_Y = train_df['score']
@@ -46,7 +46,7 @@ def predict_score(rounds):
     for n in range(rounds):
 
         try:
-            temp_df = pd.read_csv('data/params/params{}.csv'.format(n), encoding = "ISO-8859-1")
+            temp_df = pd.read_csv('data/params/params{}.csv'.format(n), encoding="ISO-8859-1")
             params = {}
 
             for k in temp_df['keys'].values:
@@ -65,7 +65,7 @@ def predict_score(rounds):
 
             df = pd.DataFrame(data={'keys':list(params.keys()), 'values':list(params.values())})
 
-            df.to_csv('data/params{}.csv'.format(n), encoding = "ISO-8859-1")
+            df.to_csv('data/params{}.csv'.format(n), encoding="ISO-8859-1")
 
         feature_columns = train_X.columns.values
 
@@ -86,11 +86,11 @@ def predict_score(rounds):
 
         final_res = final_res.sort_values(by=['prediction'], ascending=False)
 
-        final_res.to_csv('data/result{}.csv'.format(n), encoding = "ISO-8859-1")
+        final_res.to_csv('data/result{}.csv'.format(n), encoding="ISO-8859-1")
 
 
         fscores = pd.DataFrame({'X': list(clf.get_fscore().keys()), 'Y': list(clf.get_fscore().values())})
         fscores = fscores.sort_values(by=['Y'], ascending=False)
-        fscores.to_csv('data/fscores{}.csv'.format(n), encoding = "ISO-8859-1")
+        fscores.to_csv('data/fscores{}.csv'.format(n), encoding="ISO-8859-1")
 
     print('Finished score prediction')

@@ -14,6 +14,8 @@ def lable_result():
 
     final_data = final_data.drop('Unnamed: 0', axis=1)
 
+    final_data = final_data[['id_ref', 'name', 'prediction', 'consumption_status']]
+
     final_data.to_csv('data/final_data_labled.csv')
 
     print('Finished labeling')
