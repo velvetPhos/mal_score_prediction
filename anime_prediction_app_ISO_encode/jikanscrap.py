@@ -10,9 +10,12 @@ def get_data(id_ref):
     tree = html.fromstring(page.content)
 
     text = tree.xpath('text()')[0]
-    index = re.search(',"opening_theme"', text).span()[0]
+    index = re.search(',"opening_theme"', text)
 
-    text = text[:index] + '}'
+    if (index):
+        index = index.span()[0]
+
+        text = text[:index] + '}'
 
     text = json.loads(text)
 
